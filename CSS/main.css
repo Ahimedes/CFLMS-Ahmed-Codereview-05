@@ -1,0 +1,77 @@
+* {
+  margin: 0; }
+
+.headertitle {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  height: 7vw; }
+
+.Nav {
+  background-color: #454545;
+  display: block; }
+  .Nav #List {
+    list-style-type: none;
+    color: white; }
+    .Nav #List li {
+      display: inline-block; }
+      .Nav #List li a {
+        color: white;
+        font-size: 1.5vw;
+        text-decoration: none;
+        margin-right: 1vw; }
+
+.Main {
+  background-color: #1d2329;
+  color: white; }
+  .Main .Maintitle {
+    text-align: center;
+    font-size: 2vw;
+    padding: 2vw; }
+
+.movies {
+  background-color: #1d2329;
+  display: grid;
+  grid-template-columns: 33% 33%;
+  grid-gap: 10vw;
+  padding-left: 12vw; }
+  .movies .box {
+    background-color: #181818;
+    display: flex; }
+    .movies .box .pic img {
+      width: 15vw;
+      height: 25vw; }
+    .movies .box .text {
+      color: white;
+      display: flex;
+      flex-direction: column; }
+      .movies .box .text h1 {
+        padding-bottom: 1vw; }
+      .movies .box .text .likebar {
+        display: flex;
+        margin-top: auto;
+        margin-left: 2vw; }
+        .movies .box .text .likebar .likebutton {
+          background-color: #32a23d;
+          color: white;
+          font-size: 1.5vw; }
+        .movies .box .text .likebar .likestat {
+          margin-left: 5vw;
+          background-color: #32a23d;
+          color: white;
+          border-radius: 20px;
+          font-size: 2vw; }
+
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  height: 6.5vw; }
+
+/*# sourceMappingURL=main.css.map */

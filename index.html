@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Movie Factory</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headertitle"><p>Movie Factory</p></div>
+        <div class ="Nav">
+            <ul id="List">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="Main">
+        <div class="Top">
+            <div class="Maintitle"><p>Movies</p></div>
+            <div class="sort"></div>
+        </div>
+        </div>
+    </section>
+    <script  type="text/javascript" src="JS/data.json"></script>
+    <script>
+
+        let movies = JSON.parse(data)
+        let container = "<div class=\"movies\"></div>"
+        document.write(container)
+        let callcontainer = document.querySelector(".movies");
+        let currentlikes = 0;
+
+        $(document).ready(function() {
+            for (movie of movies) {
+
+            callcontainer.innerHTML +=
+            `<div class="box">
+                <div class="pic"><img src=\"./img/${movie.image}\">
+                </div>
+                <div class="text">
+                    <h1>${movie.name}</h1>
+                    <p>${movie.Description}</p>
+                    <div class="likebar"><button class="likebutton" type="button">Like!</button><h2 class="likestat"></h2></div>
+                </div>
+            </div>`
+        
+                $(`.likebutton`).click(function() {
+                    currentlikes ++;
+                    $(this).text(currentlikes)
+
+                });
+            }
+        });
+    </script>
+    <footer>
+        <p>Movie Factory</p>
+    </footer>
+</body>
+</html>
